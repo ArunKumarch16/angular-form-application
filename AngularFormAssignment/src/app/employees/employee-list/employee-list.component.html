@@ -1,0 +1,23 @@
+
+  <div class="mat-elevation-z8">
+    <mat-table [dataSource]="listData"  matSort>
+      <ng-container matColumnDef="fullName">
+        <mat-header-cell *matHeaderCellDef  mat-sort-header>Full Name</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.fullName}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="email">
+        <mat-header-cell *matHeaderCellDef  mat-sort-header>Email</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.email}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="country">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Department</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.country}}</mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="Agreed">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Department</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.Agreed}}</mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
